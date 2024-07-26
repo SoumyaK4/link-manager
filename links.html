@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links | Link Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="links.html">Links</a>
+        <button id="show-add-link-popup">Add Link</button>
+        <button id="export-data">Export</button>
+        <button id="import-data">Import</button>
+    </nav>
+    <main>
+        <div id="links-list"></div>
+    </main>
+
+    <div class="popup" id="add-link-popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add Link</h2>
+            <form id="add-link-form">
+                <input type="hidden" id="link-id">
+                <label for="category">Category:</label>
+                <select id="category" required></select>
+                <label for="link-name">Link Name:</label>
+                <input type="text" id="link-name" required>
+                <label for="link-url">Link URL:</label>
+                <input type="url" id="link-url" required>
+                <button type="submit">Submit</button>
+                <button type="button" id="cancel-link-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/links.js"></script>
+</body>
+
+</html>
